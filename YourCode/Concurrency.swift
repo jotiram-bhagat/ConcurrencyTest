@@ -52,37 +52,69 @@ import Foundation
 ///
 
 
-func loadMessage( completion: @escaping (String) -> Void) {
-    let timeoutInterval = 2.0
-       DispatchQueue.global(qos: .background).async {
-           // Create dispatch group to wait for all tasks
-           let dispatchGroup: DispatchGroup = DispatchGroup()
-           var messageOne:String = ""
-           var messageTwo:String = ""
-           
-           dispatchGroup.enter()
-           fetchMessageOne{ message in
-               messageOne = message
-               dispatchGroup.leave()
-           }
-           
-           dispatchGroup.enter()
-           fetchMessageTwo{ message in
-               messageTwo = message
-               dispatchGroup.leave()
-           }
-           
-           let result = dispatchGroup.wait(timeout: DispatchTime.now() + timeoutInterval )
-           var combinedMessage = ""
-           
-           switch result{
-           case .success:
-               combinedMessage = "\(messageOne) \(messageTwo)"
-           case .timedOut:
-               combinedMessage = ConstantString.timeoutMessage.localized()
-           }
-           DispatchQueue.main.async {
-               completion(combinedMessage)
-           }
-       }
-   }
+protocol DataSource{
+    func messageOne(completion: @escaping (String) -> Void)
+    func messageTwo(completion: @escaping (String) -> Void)
+}
+
+struct MessageDataSource:DataSource{
+    func messageOne(completion: @escaping (String) -> Void) {
+        fetchMessageOne(completion: completion)
+    }
+    func messageTwo(completion: @escaping (String) -> Void) {
+        fetchMessageTwo(completion: completion)
+    }
+}
+
+
+protocol MessageServiceProtocol{
+    func loadMessage( completion: @escaping (String) -> Void)
+}
+
+struct MessageService:MessageServiceProtocol{
+    private enum Constants{
+        static let loadMessageTimeout = 2.0
+    }
+
+    private let dataSource:DataSource
+    private let timeoutInterval:Double
+    init(dataSource ds:DataSource,timeout: Double = Constants.loadMessageTimeout) {
+        self.dataSource = ds
+        self.timeoutInterval = timeout
+    }
+    
+    func loadMessage( completion: @escaping (String) -> Void) {
+        
+        DispatchQueue.global(qos: .background).async {
+            // Create dispatch group to wait for all tasks
+            let dispatchGroup: DispatchGroup = DispatchGroup()
+            var messageOne:String = ""
+            var messageTwo:String = ""
+            
+            dispatchGroup.enter()
+            self.dataSource.messageOne { message in
+                messageOne = message
+                dispatchGroup.leave()
+            }
+            
+            dispatchGroup.enter()
+            self.dataSource.messageTwo { message in
+                messageTwo = message
+                dispatchGroup.leave()
+            }
+            
+            let result = dispatchGroup.wait(timeout: DispatchTime.now() + self.timeoutInterval )
+            var combinedMessage = ""
+            
+            switch result{
+            case .success:
+                combinedMessage = "\(messageOne) \(messageTwo)"
+            case .timedOut:
+                combinedMessage = ConstantString.timeoutMessage.localized()
+            }
+            DispatchQueue.main.async {
+                completion(combinedMessage)
+            }
+        }
+    }
+}

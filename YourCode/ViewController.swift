@@ -9,14 +9,15 @@ import UIKit
 class ViewController: UIViewController {
 
     let label = UILabel(frame: .zero)
-    
+    var messageService:MessageServiceProtocol = MessageService(dataSource: MessageDataSource())
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLabel()
         
         label.text = "loading"
         
-        loadMessage { combinedMessage in
+        messageService.loadMessage { combinedMessage in
             self.label.text = combinedMessage
         }
     }

@@ -18,6 +18,7 @@
 		AE3FC567233A2ED1008F2776 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE3FC566233A2ED1008F2776 /* Localizable.strings */; };
 		AE3FC569233A2F31008F2776 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FC568233A2F31008F2776 /* Localization.swift */; };
 		AE3FC56B233A3DA6008F2776 /* MessageDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FC56A233A3DA6008F2776 /* MessageDataSourceMock.swift */; };
+		AE3FC56D233A431F008F2776 /* MessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FC56C233A431F008F2776 /* MessagePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		AE3FC566233A2ED1008F2776 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		AE3FC568233A2F31008F2776 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		AE3FC56A233A3DA6008F2776 /* MessageDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDataSourceMock.swift; sourceTree = "<group>"; };
+		AE3FC56C233A431F008F2776 /* MessagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				84DC63F122FB43FE003FE734 /* Concurrency.swift */,
 				84DC63D122FB40AF003FE734 /* ViewController.swift */,
 				AE3FC568233A2F31008F2776 /* Localization.swift */,
+				AE3FC56C233A431F008F2776 /* MessagePresenter.swift */,
 			);
 			path = YourCode;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				AE3FC569233A2F31008F2776 /* Localization.swift in Sources */,
 				84DC63D222FB40AF003FE734 /* ViewController.swift in Sources */,
 				84DC63D022FB40AF003FE734 /* AppDelegate.swift in Sources */,
+				AE3FC56D233A431F008F2776 /* MessagePresenter.swift in Sources */,
 				84DC63F222FB43FE003FE734 /* Concurrency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

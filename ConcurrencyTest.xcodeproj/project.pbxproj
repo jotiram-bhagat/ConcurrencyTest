@@ -20,6 +20,8 @@
 		AE3FC56B233A3DA6008F2776 /* MessageDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FC56A233A3DA6008F2776 /* MessageDataSourceMock.swift */; };
 		AE3FC56D233A431F008F2776 /* MessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FC56C233A431F008F2776 /* MessagePresenter.swift */; };
 		AE3FC56F233A4829008F2776 /* MessagePresenenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FC56E233A4829008F2776 /* MessagePresenenterTests.swift */; };
+		AED11E20233A537400171229 /* DevelopmentTests.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = AED11E1E233A537400171229 /* DevelopmentTests.xcconfig */; };
+		AED11E21233A537400171229 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = AED11E1F233A537400171229 /* Development.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,14 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		84DC63CC22FB40AF003FE734 /* .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = .app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84DC63CC22FB40AF003FE734 /* ConcurrencyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DC63CF22FB40AF003FE734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84DC63D122FB40AF003FE734 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84DC63D422FB40AF003FE734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84DC63D622FB40B0003FE734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84DC63D922FB40B0003FE734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84DC63DB22FB40B0003FE734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84DC63E022FB40B0003FE734 /* .xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = .xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84DC63E022FB40B0003FE734 /* ConcurrencyTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcurrencyTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DC63E422FB40B0003FE734 /* MessageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageServiceTests.swift; sourceTree = "<group>"; };
 		84DC63E622FB40B0003FE734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84DC63EF22FB43ED003FE734 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
@@ -50,6 +52,8 @@
 		AE3FC56A233A3DA6008F2776 /* MessageDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDataSourceMock.swift; sourceTree = "<group>"; };
 		AE3FC56C233A431F008F2776 /* MessagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePresenter.swift; sourceTree = "<group>"; };
 		AE3FC56E233A4829008F2776 /* MessagePresenenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePresenenterTests.swift; sourceTree = "<group>"; };
+		AED11E1E233A537400171229 /* DevelopmentTests.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = DevelopmentTests.xcconfig; sourceTree = "<group>"; };
+		AED11E1F233A537400171229 /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 		84DC63C322FB40AE003FE734 = {
 			isa = PBXGroup;
 			children = (
+				AED11E1D233A537400171229 /* Config */,
 				84DC63F322FB4497003FE734 /* YourCode */,
 				84DC63CE22FB40AF003FE734 /* ConcurrencyTest */,
 				84DC63E322FB40B0003FE734 /* ConcurrencyTestTests */,
@@ -83,8 +88,8 @@
 		84DC63CD22FB40AF003FE734 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84DC63CC22FB40AF003FE734 /* .app */,
-				84DC63E022FB40B0003FE734 /* .xctest */,
+				84DC63CC22FB40AF003FE734 /* ConcurrencyTest.app */,
+				84DC63E022FB40B0003FE734 /* ConcurrencyTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +130,15 @@
 			path = YourCode;
 			sourceTree = "<group>";
 		};
+		AED11E1D233A537400171229 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				AED11E1E233A537400171229 /* DevelopmentTests.xcconfig */,
+				AED11E1F233A537400171229 /* Development.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,7 +156,7 @@
 			);
 			name = ConcurrencyTest;
 			productName = ConcurrencyTest;
-			productReference = 84DC63CC22FB40AF003FE734 /* .app */;
+			productReference = 84DC63CC22FB40AF003FE734 /* ConcurrencyTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 		84DC63DF22FB40B0003FE734 /* ConcurrencyTestTests */ = {
@@ -160,7 +174,7 @@
 			);
 			name = ConcurrencyTestTests;
 			productName = ConcurrencyTestTests;
-			productReference = 84DC63E022FB40B0003FE734 /* .xctest */;
+			productReference = 84DC63E022FB40B0003FE734 /* ConcurrencyTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -206,10 +220,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED11E21233A537400171229 /* Development.xcconfig in Resources */,
 				84DC63DA22FB40B0003FE734 /* LaunchScreen.storyboard in Resources */,
 				AE3FC567233A2ED1008F2776 /* Localizable.strings in Resources */,
 				84DC63D722FB40B0003FE734 /* Assets.xcassets in Resources */,
 				84DC63D522FB40AF003FE734 /* Main.storyboard in Resources */,
+				AED11E20233A537400171229 /* DevelopmentTests.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +410,7 @@
 		};
 		84DC63EA22FB40B0003FE734 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AED11E1F233A537400171229 /* Development.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
@@ -406,6 +423,7 @@
 		};
 		84DC63ED22FB40B0003FE734 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AED11E1E233A537400171229 /* DevelopmentTests.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;

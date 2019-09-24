@@ -71,5 +71,35 @@ class MessageServiceTests: XCTestCase {
         }
         waitForExpectations(timeout: 5)
     }
+    
+    func testloadMessageSuccessWithCustomTimeoutInterval() {
+        var  mockClient = MessageDataSourceMock()
+        let  timeout = 4.0
+        mockClient.messageOneResponseTime = 1000
+        mockClient.messageTwoResponseTime = 1000
+        let expectationLoadMessage = expectation(description: "Load Message")
+        let messageService = MessageService(dataSource: mockClient,timeout:timeout)
+        messageService.loadMessage { combinedMessage in
+                   let expectedMessage = "\(mockClient.messageOne) \(mockClient.messageTwo)"
+                   XCTAssert(combinedMessage == expectedMessage, "Combined message should be \(expectedMessage)" )
+                   expectationLoadMessage.fulfill()
+        }
+        waitForExpectations(timeout: 5)
+    }
+    
+    func testloadMessageTimeoutWithCustomTimeoutInterval() {
+        var  mockClient = MessageDataSourceMock()
+        let  timeout = 0.5
+        mockClient.messageOneResponseTime = 1000
+        mockClient.messageTwoResponseTime = 1000
+        let expectationLoadMessage = expectation(description: "Load Message Timeout")
+        let messageService = MessageService(dataSource: mockClient,timeout:timeout)
+        messageService.loadMessage { combinedMessage in
+            XCTAssert(combinedMessage == ConstantString.timeoutMessage.localized(),
+                      "Combined message should be \(ConstantString.timeoutMessage.localized())")
+            expectationLoadMessage.fulfill()
+        }
+        waitForExpectations(timeout: 5)
+    }
 }
 

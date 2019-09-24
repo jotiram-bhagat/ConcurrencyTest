@@ -1,11 +1,15 @@
-# Sample Test
+# ConcurrencyTest
+This application fetches message in two parts asynchronously joint them sequentially. If either part of message takes more than 2 second it shows `Unable to load message - Time out exceeded`.
 
-## Instructions
+## Screenshots
 
-* Open the Xcode project
-* Use Swift 4.2
-* Read the instructions in Concurrency.swift
-* After you have completed your test
-    * Create a zip file containing your code and the git history.
-        * Name this file ConcurrencyTest-YourName.zip
-    * Email this to your HSBC contact
+<p float="left">
+<img width="200" src="timeout.png">
+<img width="200" src="helloWorld.png">
+</p>
+
+## LoadMessage UnitTests
+<img width="1500" src="unitTests.png">
+
+
+

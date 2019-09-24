@@ -50,15 +50,39 @@ import Foundation
 /// * Code readability & matching apple naming guidelines
 /// * Showing work through git history
 ///
-func loadMessage(completion: @escaping (String) -> Void) {
-    
-    fetchMessageOne { (messageOne) in
-    }
-    
-    fetchMessageTwo { (messageTwo) in
-    }
-    
-    /// The completion handler that should be called with the joined messages from fetchMessageOne & fetchMessageTwo
-    /// Please delete this comment before submission.
-    completion("Good morning!")
-}
+
+
+func loadMessage( completion: @escaping (String) -> Void) {
+    let timeoutInterval = 2.0
+       DispatchQueue.global(qos: .background).async {
+           // Create dispatch group to wait for all tasks
+           let dispatchGroup: DispatchGroup = DispatchGroup()
+           var messageOne:String = ""
+           var messageTwo:String = ""
+           
+           dispatchGroup.enter()
+           fetchMessageOne{ message in
+               messageOne = message
+               dispatchGroup.leave()
+           }
+           
+           dispatchGroup.enter()
+           fetchMessageTwo{ message in
+               messageTwo = message
+               dispatchGroup.leave()
+           }
+           
+           let result = dispatchGroup.wait(timeout: DispatchTime.now() + timeoutInterval )
+           var combinedMessage = ""
+           
+           switch result{
+           case .success:
+               combinedMessage = "\(messageOne) \(messageTwo)"
+           case .timedOut:
+               combinedMessage = ConstantString.timeoutMessage.localized()
+           }
+           DispatchQueue.main.async {
+               completion(combinedMessage)
+           }
+       }
+   }

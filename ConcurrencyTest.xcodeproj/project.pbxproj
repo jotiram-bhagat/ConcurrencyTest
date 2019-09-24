@@ -15,6 +15,8 @@
 		84DC63E522FB40B0003FE734 /* ConcurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC63E422FB40B0003FE734 /* ConcurrencyTests.swift */; };
 		84DC63F022FB43ED003FE734 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC63EF22FB43ED003FE734 /* DataSource.swift */; };
 		84DC63F222FB43FE003FE734 /* Concurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC63F122FB43FE003FE734 /* Concurrency.swift */; };
+		AE3FC567233A2ED1008F2776 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE3FC566233A2ED1008F2776 /* Localizable.strings */; };
+		AE3FC569233A2F31008F2776 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FC568233A2F31008F2776 /* Localization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		84DC63E622FB40B0003FE734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84DC63EF22FB43ED003FE734 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		84DC63F122FB43FE003FE734 /* Concurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concurrency.swift; sourceTree = "<group>"; };
+		AE3FC566233A2ED1008F2776 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		AE3FC568233A2F31008F2776 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 				84DC63D622FB40B0003FE734 /* Assets.xcassets */,
 				84DC63D822FB40B0003FE734 /* LaunchScreen.storyboard */,
 				84DC63DB22FB40B0003FE734 /* Info.plist */,
+				AE3FC566233A2ED1008F2776 /* Localizable.strings */,
 			);
 			path = ConcurrencyTest;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			children = (
 				84DC63F122FB43FE003FE734 /* Concurrency.swift */,
 				84DC63D122FB40AF003FE734 /* ViewController.swift */,
+				AE3FC568233A2F31008F2776 /* Localization.swift */,
 			);
 			path = YourCode;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84DC63DA22FB40B0003FE734 /* LaunchScreen.storyboard in Resources */,
+				AE3FC567233A2ED1008F2776 /* Localizable.strings in Resources */,
 				84DC63D722FB40B0003FE734 /* Assets.xcassets in Resources */,
 				84DC63D522FB40AF003FE734 /* Main.storyboard in Resources */,
 			);
@@ -212,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84DC63F022FB43ED003FE734 /* DataSource.swift in Sources */,
+				AE3FC569233A2F31008F2776 /* Localization.swift in Sources */,
 				84DC63D222FB40AF003FE734 /* ViewController.swift in Sources */,
 				84DC63D022FB40AF003FE734 /* AppDelegate.swift in Sources */,
 				84DC63F222FB43FE003FE734 /* Concurrency.swift in Sources */,

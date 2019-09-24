@@ -1,0 +1,7 @@
+/* 
+  Localizable.strings
+  ConcurrencyTest
+*/
+
+"loadingMessage"="Loading";
+"timeoutMessage"="Unable to load message - Time out exceeded";

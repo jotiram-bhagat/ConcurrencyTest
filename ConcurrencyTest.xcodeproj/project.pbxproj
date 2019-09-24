@@ -12,11 +12,12 @@
 		84DC63D522FB40AF003FE734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DC63D322FB40AF003FE734 /* Main.storyboard */; };
 		84DC63D722FB40B0003FE734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DC63D622FB40B0003FE734 /* Assets.xcassets */; };
 		84DC63DA22FB40B0003FE734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DC63D822FB40B0003FE734 /* LaunchScreen.storyboard */; };
-		84DC63E522FB40B0003FE734 /* ConcurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC63E422FB40B0003FE734 /* ConcurrencyTests.swift */; };
+		84DC63E522FB40B0003FE734 /* MessageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC63E422FB40B0003FE734 /* MessageServiceTests.swift */; };
 		84DC63F022FB43ED003FE734 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC63EF22FB43ED003FE734 /* DataSource.swift */; };
 		84DC63F222FB43FE003FE734 /* Concurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC63F122FB43FE003FE734 /* Concurrency.swift */; };
 		AE3FC567233A2ED1008F2776 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE3FC566233A2ED1008F2776 /* Localizable.strings */; };
 		AE3FC569233A2F31008F2776 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FC568233A2F31008F2776 /* Localization.swift */; };
+		AE3FC56B233A3DA6008F2776 /* MessageDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FC56A233A3DA6008F2776 /* MessageDataSourceMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,12 +39,13 @@
 		84DC63D922FB40B0003FE734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84DC63DB22FB40B0003FE734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84DC63E022FB40B0003FE734 /* ConcurrencyTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcurrencyTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		84DC63E422FB40B0003FE734 /* ConcurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyTests.swift; sourceTree = "<group>"; };
+		84DC63E422FB40B0003FE734 /* MessageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageServiceTests.swift; sourceTree = "<group>"; };
 		84DC63E622FB40B0003FE734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84DC63EF22FB43ED003FE734 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		84DC63F122FB43FE003FE734 /* Concurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concurrency.swift; sourceTree = "<group>"; };
 		AE3FC566233A2ED1008F2776 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		AE3FC568233A2F31008F2776 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		AE3FC56A233A3DA6008F2776 /* MessageDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDataSourceMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +102,9 @@
 		84DC63E322FB40B0003FE734 /* ConcurrencyTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				84DC63E422FB40B0003FE734 /* ConcurrencyTests.swift */,
+				84DC63E422FB40B0003FE734 /* MessageServiceTests.swift */,
 				84DC63E622FB40B0003FE734 /* Info.plist */,
+				AE3FC56A233A3DA6008F2776 /* MessageDataSourceMock.swift */,
 			);
 			path = ConcurrencyTestTests;
 			sourceTree = "<group>";
@@ -230,7 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84DC63E522FB40B0003FE734 /* ConcurrencyTests.swift in Sources */,
+				AE3FC56B233A3DA6008F2776 /* MessageDataSourceMock.swift in Sources */,
+				84DC63E522FB40B0003FE734 /* MessageServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
